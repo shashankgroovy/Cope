@@ -1,0 +1,146 @@
+/* GLOBAL STYLES 
+----------------------------------------------------------- */
+* { margin: 0;}
+
+html, body {
+    height: 100%;
+    background-color: #EEEEEE;
+    font-size: 16px;
+}
+
+/* CUSTOMIZE THE MAIN CONTENT AREA
+----------------------------------------------------------- */
+.content {
+    min-height: auto;
+    margin: auto;
+    padding-top: 5em;
+    width: 80%;
+    text-align: center;
+}
+
+.site-logo {
+    letter-spacing: 10px;
+    color: #FFFFFF;
+    font: bold 170px/170px '47', sans-serif;
+}
+
+.site-tagline {
+    margin-top: 15px;
+    color: #7D7D7D;
+    font-size: 40px;
+    font-family: 'Voltaire', sans-serif;
+}
+
+/* Form element */
+.form {
+    height: auto;
+    width: auto;
+    margin: 30px 0;
+}
+
+.textbox {
+    height: auto;
+    width: 50%;
+    padding: 13px;
+    border: none;
+    background-color: #FCFCFC;
+    font-size: 16px;
+    font-family: 'Voltaire';
+}
+
+/* Special class used for positioning the `search` icon inside the text-box */
+.search-fix {
+    position: relative;
+    margin-left: -30px;
+    color: #7D7D7D;
+}
+
+/* CUSTOMIZIE THE FOOTER
+---------------------------------------------------------*/
+/* Negative margin to pull up the footer and lighter body text */
+
+.site-footer {
+    position: fixed;
+    margin-bottom: 10px;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    background-color: #282828;
+    font-size: 24px;
+}
+
+/* Make an inline list */
+ul { 
+    list-style: none;
+    display: inline;
+}
+
+li {
+    margin: auto;
+    padding: .6em;
+    height: auto;
+    width: auto;
+    border-left: solid 1px #222222;
+    border-bottom: solid 4px transparent;
+    background-color: #282828;
+    color: #848484;
+    font-family: 'Voltaire';
+    text-align: center;
+}
+
+li:hover, li.pro-active { 
+    color: #FFFFFF;
+}
+
+li.active { 
+    background-color: #333333;
+    color: #FFFFFF;
+    border-bottom: solid 4px #008DDE; /* #20a2d2 */
+}
+
+/* Pull the li elements on the left/right side */
+li.pull-left {
+    float: left;
+}
+li.pull-right {
+    float: right;
+}
+
+
+/* RESPONSIVE CSS 
+---------------------------------------------------------*/
+
+@media handheld, (max-width: 768px) {
+    /* Adjust the logo for mobile */
+    .site-logo { font-size: 150px; }
+    .site-tagline { font-size: 20px; }
+    /* Adjust the length of the input box to screen size */
+    .textbox { width: 90%; }
+    /* replace the text in navbar with icon */
+    .display-text { display: none; }  
+    .display-icon { display: hidden; }
+}
+
+/* for really slim displays */
+@media (max-width: 350px), handheld and (orientation: portrait) {
+    .site-logo { font-size: 120px; }
+    .site-tagline { font-size: 16px; }
+    .site-footer { font-size: 18px; }
+}
+
+@media (min-width: 768px), handheld and (orientation: landscape) {
+    .site-tagline { font-size: 30px; }
+    .textbox { width: 70%; }
+    /* replace the icon in navbar with text */
+    .display-text { display: hidden; }  
+    .display-icon { display: none; }
+}
+
+@media (min-width: 992px) {
+    /* to have the fucking search icon stay within the inputbox add screen to
+     * this media query */
+    .textbox { width: 50%; }
+}
+
+
