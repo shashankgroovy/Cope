@@ -11,7 +11,7 @@ html, body {
 /* CUSTOMIZE THE MAIN CONTENT AREA
 ----------------------------------------------------------- */
 .content {
-    min-height: auto;
+    /*min-height: auto;*/
     margin: auto;
     padding-top: 5em;
     width: 80%;
@@ -109,6 +109,14 @@ li.pull-left { float: left; }
 li.pull-right { float: right; }
 
 
+/* CUSTOMIZE SELECTION COLOR
+-------------------------------------------------------*/
+/* changes the color when you select some text */
+::selection {
+    background-color: #008DDE;
+    color: #FFFFFF;
+}
+
 /* RESPONSIVE CSS
 ---------------------------------------------------------*/
 
@@ -121,6 +129,7 @@ li.pull-right { float: right; }
     /* replace the text in navbar with icon */
     .display-text { display: none; }
     .display-icon { display: inline; }
+    #menu1 li, #menu2 li { font-size: 16px;}
 }
 
 @media (min-width: 768px) {
@@ -130,23 +139,52 @@ li.pull-right { float: right; }
     .display-icon { display: none; }
 }
 
-@media (max-width: 350px), handheld and (orientation: portrait) {
+@media (min-width: 992px) {
+    .textbox { width: 50%; }
+}
+
+/* media queries for handheld devices
+ ------------------------------------------------------*/
+@media (max-width: 390px), handheld and (orientation: portrait) {
     /* for really slim displays */
     .site-logo { font-size: 120px; }
     .site-tagline { font-size: 16px; }
     .site-footer { font-size: 16px; }
+    .search-fix {display: none; }
     .pull-right { float: left;}
 }
-@media (min-width: 992px) {
-    /* to have the fucking search icon stay within the inputbox add `screen`
-     * to this media query since we are obviously viewing the mobile
-     * site on a computer hence.*/
-    .textbox { width: 50%; }
-}
 
-/* CUSTOMIZE SELECTION COLOR
--------------------------------------------------------*/
-::selection {
-    background-color: #008DDE;
-    color: #FFFFFF;
+@media (max-height: 450px) {
+    /* Customize the content area and footer for displays of small height */
+    .content {
+        min-height: 60%;
+        height: auto !important;
+        height: 100%;
+        margin-bottom: -.5px;
+        padding: 0;
+    }
+    .content:after {
+        content: "";
+        display: block;
+    }
+    .site-footer, .content:after {
+        /* .push must be the same height as footer */
+        height: 142px
+    }
+    .site-logo {
+        font-size: 120px;
+        height: 150px;
+    }
+    .site-tagline {
+        font-size: 14px;
+        margin: 12px 0 24px 0;
+    }
+    .form { margin: auto;}
+    .site-footer {
+        font-size: 16px; 
+        position: static;
+        height: 2.8em;
+        margin-bottom: 0;
+    }
+    #menu1 li, #menu2 li { font-size: 16px;}
 }
