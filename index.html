@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Cope</title>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Voltaire|Josefin+Sans|PT+Sans'>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire|Josefin+Sans|PT+Sans">
     <link rel="stylesheet" href="stylesheets/general_foundicons.css">
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
-
 </head>
+
 <body>
     <div class="content">
         <p class="site-logo">COPE</p>
-        <p class="site-tagline">By C&lt;&gt;ntagious</p>
+        <p class="site-tagline">By C&lt;&gt;NTAGIOUS</p>
 
         <!--form element-->
         <form class="form">
@@ -62,17 +62,23 @@
             /* Note to self:
              add fadein effect to embrace a smooth transition for
              displaying the menu. */
-            
+
             //attach click event to buttons
+            var $menu1li = $("#menu1 li");
+            var $menu2li = $("#menu2 li");
             $('.clicker1').click(function() {
-                    $("#menu1 li").fadeOut(500);//toggleClass('hidden reveal');
                     $('li.clicker1').toggleClass('active');
-                    $("#menu1 li").fadeIn(500);//toggleClass('hidden reveal');
+                    if ($menu1li.is(':visible'))
+                        $menu1li.fadeOut(300);
+                    else
+                        $menu1li.fadeIn(300);
             });
             $('li.clicker2').click(function() {
-                    $("#menu2 li").hide().fadeOut(500);//toggleClass('hidden reveal');
                     $('.clicker2').toggleClass('active');
-                    $("#menu2 li").fadeIn(500);//toggleClass('hidden reveal').fadeIn(1000); 
+                    if ($menu2li.is(':visible'))
+                        $menu2li.fadeOut(300);
+                    else
+                        $menu2li.fadeIn(300);
             });
 
             /*************************************************************
@@ -81,9 +87,9 @@
             **************************************************************
             $(document).click(function () {
                 $('li.clicker1').removeClass('active');
-                $("#menu1 li").addClass('hidden'); 
+                $("#menu1 li").addClass('hidden');
                 $('li.clicker2').removeClass('active');
-                $("#menu2 li").addClass('hidden'); 
+                $("#menu2 li").addClass('hidden');
             });
             *************************************************************/
         });
