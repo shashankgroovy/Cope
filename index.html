@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Cope</title>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Voltaire|Josefin+Sans|PT+Sans'>
-    <link rel="stylesheet" href="stylesheets/general_foundicons.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire">
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
-
 </head>
+
 <body>
     <div class="content">
         <p class="site-logo">COPE</p>
@@ -50,37 +49,11 @@
         </ul>
     </footer>
 
+    <!--jQuery and jQueryUI library imports-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="scripts/jquery.min.js"></script>
-
-    <!--A simple script for making clickable navigation menu elements-->
-    <script>
-        //DOM loaded
-        $(document).ready(function() {
-
-            //attach click event to buttons
-            $('.clicker1').click(function() {
-                    $('li.clicker1').toggleClass('active');
-                    $("#menu1 li").fadeToggle(300);
-            });
-            $('li.clicker2').click(function() {
-                    $('.clicker2').toggleClass('active');
-                    $("#menu2 li").fadeToggle(300);
-            });
-
-            /*************************************************************
-              rewrite this function to hide the sliding menu when clicked
-              anywhere else on the body
-            **************************************************************
-            $(document).click(function () {
-                $('li.clicker1').removeClass('active');
-                $("#menu1 li").addClass('hidden'); 
-                $('li.clicker2').removeClass('active');
-                $("#menu2 li").addClass('hidden'); 
-            });
-            *************************************************************/
-        });
-    </script>
+    <!--custom page script import-->
+    <script src="scripts/script.js"></script>
 </body>
 </html>
