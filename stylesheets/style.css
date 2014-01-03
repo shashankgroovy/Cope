@@ -1,4 +1,4 @@
-/* GLOBAL STYLES 
+/* GLOBAL STYLES
 ----------------------------------------------------------- */
 * { margin: 0;}
 
@@ -71,7 +71,7 @@ html, body {
 }
 
 /* Make an inline list */
-ul { 
+ul {
     list-style: none;
     display: inline;
 }
@@ -92,7 +92,7 @@ li {
 /* the pro-active class is set for the cope logo */
 li:hover, li.pro-active { color: #FFFFFF; }
 
-li.active { 
+li.active {
     background-color: #333333;
     color: #FFFFFF;
     border-bottom: solid 4px #008DDE; /* #20a2d2 */
@@ -109,7 +109,7 @@ li.pull-left { float: left; }
 li.pull-right { float: right; }
 
 
-/* RESPONSIVE CSS 
+/* RESPONSIVE CSS
 ---------------------------------------------------------*/
 
 @media handheld, (max-width: 768px) {
@@ -119,14 +119,14 @@ li.pull-right { float: right; }
     /* Adjust the length of the input box to screen size */
     .textbox { width: 90%; }
     /* replace the text in navbar with icon */
-    .display-text { display: none; }  
+    .display-text { display: none; }
     .display-icon { display: inline; }
 }
 
 @media (min-width: 768px) {
     .site-tagline { font-size: 30px; }
     /* replace the icon in navbar with text */
-    .display-text { display: inline; }  
+    .display-text { display: inline; }
     .display-icon { display: none; }
 }
 
@@ -138,10 +138,8 @@ li.pull-right { float: right; }
     .pull-right { float: left;}
 }
 @media (min-width: 992px) {
-    /* to have the fucking search icon stay within the inputbox add `screen` to 
+    /* to have the fucking search icon stay within the inputbox add `screen` to
      * this media query since we are obviously viewing the mobile
      * site on a computer hence.*/
     .textbox { width: 50%; }
 }
-
-
