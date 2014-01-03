@@ -59,20 +59,14 @@
         //DOM loaded
         $(document).ready(function() {
 
-            /* Note to self:
-             add fadein effect to embrace a smooth transition for
-             displaying the menu. */
-            
             //attach click event to buttons
             $('.clicker1').click(function() {
-                    $("#menu1 li").fadeOut(500);//toggleClass('hidden reveal');
                     $('li.clicker1').toggleClass('active');
-                    $("#menu1 li").fadeIn(500);//toggleClass('hidden reveal');
+                    $("#menu1 li").fadeToggle(300);
             });
             $('li.clicker2').click(function() {
-                    $("#menu2 li").hide().fadeOut(500);//toggleClass('hidden reveal');
                     $('.clicker2').toggleClass('active');
-                    $("#menu2 li").fadeIn(500);//toggleClass('hidden reveal').fadeIn(1000); 
+                    $("#menu2 li").fadeToggle(300);
             });
 
             /*************************************************************

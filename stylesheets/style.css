@@ -101,8 +101,8 @@ li.active {
 /* Customize the sliding menus in the nav bar */
 #menu1 li, #menu2 li { font-size: 20px; }
 
+/* The elements on the panel are kept hidden by default */
 li.hidden { display: none; }
-li.reveal { display: block; }
 
 /* Float the li elements on the left/right side */
 li.pull-left { float: left; }
