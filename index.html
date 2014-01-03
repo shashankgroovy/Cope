@@ -16,7 +16,7 @@
 
         <!--form element-->
         <form class="form">
-            <input type="text" class="textbox" placeholder="Search for a book"/>
+            <input type="text" name="q" class="textbox" placeholder="Search for a book"/>
             <a href="#"><i class="fa fa-search search-fix"></i></a>
         </form>
     </div>
@@ -31,10 +31,62 @@
             <a href="#"><li class="pull-left display-text active">Transactions</li></a>
             <a href="#"><li class="pull-left display-icon"><i class="fa fa-exchange"></i></li></a>
             <a href="#"><li class="pull-left"><i class="fa fa-search"></i></li></a>
-            <!--content on the right side -->
-            <a href="#"><li class="pull-right"><i class="fa fa-bars"></i></li></a>
-            <a href="#"><li class="pull-right"><i class="fa fa-plus fa-fw"></i></li></a>
+
+            <!--sliding menus on the right side -->
+            <!--menu 1-->
+            <a href="#"><li id="" class="pull-right clicker1"><i class="fa fa-bars"></i></li></a>
+            <ul id="menu1">
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-sign-out"></i> Logout</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-pencil"></i> Change password</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-cog"></i> Settings</li></a>
+            </ul>
+
+            <!--menu 2-->
+            <a href="#"><li id="" class="pull-right clicker2"><i class="fa fa-plus fa-fw"></i></li></a>
+            <ul id="menu2">
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-book"></i> Book</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-user"></i> User</li></a>
+            </ul>
         </ul>
     </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+
+    <!--A simple script for making clickable navigation menu elements-->
+    <script>
+        //DOM loaded
+        $(document).ready(function() {
+
+            /* Note to self:
+             add fadein effect to embrace a smooth transition for
+             displaying the menu. */
+            
+            //attach click event to buttons
+            $('.clicker1').click(function() {
+                    $("#menu1 li").fadeOut(500);//toggleClass('hidden reveal');
+                    $('li.clicker1').toggleClass('active');
+                    $("#menu1 li").fadeIn(500);//toggleClass('hidden reveal');
+            });
+            $('li.clicker2').click(function() {
+                    $("#menu2 li").hide().fadeOut(500);//toggleClass('hidden reveal');
+                    $('.clicker2').toggleClass('active');
+                    $("#menu2 li").fadeIn(500);//toggleClass('hidden reveal').fadeIn(1000); 
+            });
+
+            /*************************************************************
+              rewrite this function to hide the sliding menu when clicked
+              anywhere else on the body
+            **************************************************************
+            $(document).click(function () {
+                $('li.clicker1').removeClass('active');
+                $("#menu1 li").addClass('hidden'); 
+                $('li.clicker2').removeClass('active');
+                $("#menu2 li").addClass('hidden'); 
+            });
+            *************************************************************/
+        });
+    </script>
 </body>
 </html>

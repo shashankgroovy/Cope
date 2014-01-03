@@ -4,7 +4,7 @@
 
 html, body {
     height: 100%;
-    background-color: #EEEEEE;
+    background-color: #EEEEEE; /* #F5F5F5 */
     font-size: 16px;
 }
 
@@ -67,7 +67,7 @@ html, body {
     height: auto;
     width: 100%;
     background-color: #282828;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* Make an inline list */
@@ -89,9 +89,8 @@ li {
     text-align: center;
 }
 
-li:hover, li.pro-active { 
-    color: #FFFFFF;
-}
+/* the pro-active class is set for the cope logo */
+li:hover, li.pro-active { color: #FFFFFF; }
 
 li.active { 
     background-color: #333333;
@@ -99,13 +98,15 @@ li.active {
     border-bottom: solid 4px #008DDE; /* #20a2d2 */
 }
 
-/* Pull the li elements on the left/right side */
-li.pull-left {
-    float: left;
-}
-li.pull-right {
-    float: right;
-}
+/* Customize the sliding menus in the nav bar */
+#menu1 li, #menu2 li { font-size: 20px; }
+
+li.hidden { display: none; }
+li.reveal { display: block; }
+
+/* Float the li elements on the left/right side */
+li.pull-left { float: left; }
+li.pull-right { float: right; }
 
 
 /* RESPONSIVE CSS 
@@ -119,27 +120,27 @@ li.pull-right {
     .textbox { width: 90%; }
     /* replace the text in navbar with icon */
     .display-text { display: none; }  
-    .display-icon { display: hidden; }
+    .display-icon { display: inline; }
 }
 
-/* for really slim displays */
-@media (max-width: 350px), handheld and (orientation: portrait) {
-    .site-logo { font-size: 120px; }
-    .site-tagline { font-size: 16px; }
-    .site-footer { font-size: 18px; }
-}
-
-@media (min-width: 768px), handheld and (orientation: landscape) {
+@media (min-width: 768px) {
     .site-tagline { font-size: 30px; }
-    .textbox { width: 70%; }
     /* replace the icon in navbar with text */
-    .display-text { display: hidden; }  
+    .display-text { display: inline; }  
     .display-icon { display: none; }
 }
 
+@media (max-width: 350px), handheld and (orientation: portrait) {
+    /* for really slim displays */
+    .site-logo { font-size: 120px; }
+    .site-tagline { font-size: 16px; }
+    .site-footer { font-size: 16px; }
+    .pull-right { float: left;}
+}
 @media (min-width: 992px) {
-    /* to have the fucking search icon stay within the inputbox add screen to
-     * this media query */
+    /* to have the fucking search icon stay within the inputbox add `screen` to 
+     * this media query since we are obviously viewing the mobile
+     * site on a computer hence.*/
     .textbox { width: 50%; }
 }
 
