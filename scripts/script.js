@@ -31,6 +31,11 @@ $(document).ready(function() {
             e.stopPropagation();
     });
 
+    /* disable hiding #menu1 and #menu2 when click is on footer */
+    $('footer').click(function (e) {
+            e.stopPropagation();
+    });
+
     /* hide the submenus if clicked anywhere else on the document */
     $(document).click(function () {
             if ($('#menu1 li').is(':visible')) {
@@ -43,4 +48,3 @@ $(document).ready(function() {
             }
     });
 });
-
