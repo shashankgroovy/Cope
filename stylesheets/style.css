@@ -6,6 +6,8 @@ html, body {
     height: 100%;
     background-color: #EEEEEE; /* #F5F5F5 */
     font-size: 16px;
+    font-family: 'Voltaire';
+    color: #7D7D7D;
 }
 
 /* CUSTOMIZE THE MAIN CONTENT AREA
@@ -76,7 +78,7 @@ ul {
     display: inline;
 }
 
-li {
+footer li {
     margin: auto;
     padding: .6em;
     height: auto;
@@ -90,9 +92,9 @@ li {
 }
 
 /* the pro-active class is set for the cope logo */
-li:hover, li.pro-active { color: #FFFFFF; }
+footer li:hover, footer li.pro-active { color: #FFFFFF; }
 
-li.active {
+footer li.active {
     background-color: #333333;
     color: #FFFFFF;
     border-bottom: solid 4px #008DDE; /* #20a2d2 */
@@ -102,11 +104,11 @@ li.active {
 #menu1 li, #menu2 li { font-size: 20px; }
 
 /* The elements on the panel are kept hidden by default */
-li.hidden { display: none; }
+footer li.hidden { display: none; }
 
-/* Float the li elements on the left/right side */
-li.pull-left { float: left; }
-li.pull-right { float: right; }
+/* Float the elements on the left/right side */
+.pull-left { float: left; }
+.pull-right { float: right; }
 
 
 /* CUSTOMIZE SELECTION COLOR

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cope</title>
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire">-->
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/transaction.css">
+</head>
+
+<body>
+    <article class="content">
+        <header class="banner">Issue / Return</header>
+            <aside class="content-profile pull-right">
+                <header>Profile</header>
+                <ul>
+                    <li class="radio">
+                        <p><i class="fa fa-check pull-left"></i> Student</p>
+                    </li>
+                    <li class="radio">
+                        <p><i class="fa fa-check pull-left"></i> Faculty</p>
+                    </li>
+                </ul>
+            </aside>
+
+        <!--form element-->
+        <form class="form">
+            <section class="content-user">
+                <input type="text" name="rollno" class="textbox textbox-md " placeholder="Roll No."/>
+                <input type="text" name="empno" class="textbox textbox-md hidden" placeholder="Employee No."/>
+                <input type="text" name="name" class="textbox textbox-md" placeholder="Name"/>
+            </section>
+
+            <div style="clear: both;">...</div>
+
+            <section class="content-book">
+            <header><p class="banner2">Current Book List :</p></header>
+                <div class="book">
+                    <input type="text" name="bookno" class="textbox textbox-sm" placeholder="Book No."/>
+                    <input type="text" name="bookname" class="textbox textbox-lg" placeholder="Book Name"/>
+                    <a href="#" class="item-action"><i class="fa fa-repeat item-repeat"></i></a>
+                    <a href="#" class="item-action"><i class="fa fa-check item-check"></i></a>
+                </div>
+                <p class="item-add"><a href="#">+ Add a Book</a></p>
+            </section>
+        </form>
+    </article>
+
+    <footer class="site-footer">
+     <!--navbar-->
+        <ul>
+            <!-- HACK: explicit blank `li` item to provide a right bank!-->
+            <li class="pull-left display-text"></li>
+            <!--content on the left side-->
+            <a href="index.html"><li class="pull-left pro-active">cope</li></a>
+            <a href="transaction.html"><li class="pull-left display-text active">Transactions</li></a>
+            <a href="transaction.html"><li class="pull-left display-icon"><i class="fa fa-exchange"></i></li></a>
+            <a href="search.html"><li class="pull-left"><i class="fa fa-search"></i></li></a>
+
+            <!--sliding menus on the right side -->
+            <!--menu 1-->
+            <a href="#"><li id="" class="pull-right clicker1"><i class="fa fa-bars"></i></li></a>
+            <ul id="menu1">
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-sign-out"></i> Logout</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-pencil"></i> Change password</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-cog"></i> Settings</li></a>
+            </ul>
+
+            <!--menu 2-->
+            <a href="#"><li id="" class="pull-right clicker2"><i class="fa fa-plus fa-fw"></i></li></a>
+            <ul id="menu2">
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-book"></i> Book</li></a>
+                <a href="#"><li class="pull-right hidden"><i class="fa fa-user"></i> User</li></a>
+            </ul>
+        </ul>
+    </footer>
+
+    <!--jQuery and jQueryUI library imports-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
+    <script src="scripts/jquery.min.js"></script>
+    <!--custom page script import-->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/transaction.js"></script>
+</body>
+</html>
