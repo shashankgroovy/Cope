@@ -1,59 +1,54 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cope</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire">
+	<meta charset="UTF-8">
+	<title>Cope</title>
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire"> -->
     <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-
 <body>
-    <div class="content">
-        <p class="site-logo">COPE</p>
-        <p class="site-tagline">By C&lt;&gt;ntagious</p>
+	<div id="container">
+		<div id="content">
+			<h1 id="site-logo">COPE</h1>
+			<h3 id="site-tagline">By C&lt;&gt;NTAGIOUS</h3>
 
-        <!--form element-->
-        <form class="form">
-            <input type="text" name="q" class="textbox" placeholder="Search for a book"/>
-            <a href="#"><i class="fa fa-search search-fix"></i></a>
-        </form>
-    </div>
+			<form>
+				<input type="text" name="q" id="q" placeholder="Search for a book">
+				<button type="submit"><i class="fa fa-search search-fix"></i></button>
+			</form>
+		</div>
 
-    <footer class="site-footer">
-     <!--navbar-->
-        <ul>
-            <!-- HACK: explicit blank `li` item to provide a right bank!-->
-            <li class="pull-left display-text"></li>
-            <!--content on the left side-->
-            <a href="index.html"><li class="pull-left pro-active">cope</li></a>
-            <a href="transaction.html"><li class="pull-left display-text">Transactions</li></a>
-            <a href="transaction.html"><li class="pull-left display-icon"><i class="fa fa-exchange"></i></li></a>
-            <a href="search.html"><li class="pull-left"><i class="fa fa-search"></i></li></a>
+		<footer id="site-footer">
+			<section id="nav">
+				<ul>
+					<li class="pro-active"><a href="index.html">cope</a></li>
+					<li class="display-text"><a href="transaction.html">Transactions</a></li>
+					<li class="display-icon"><a href="transaction.html"><i class="fa fa-exchange"></i></a></li>
+					<li><a href="search.html"><i class="fa fa-search"></i></a></li>
+				</ul>
+			</section>
 
-            <!--sliding menus on the right side -->
-            <!--menu 1-->
-            <a href="#"><li id="" class="pull-right clicker1"><i class="fa fa-bars"></i></li></a>
-            <ul id="menu1">
-                <a href="#"><li class="pull-right hidden"><i class="fa fa-sign-out"></i> Logout</li></a>
-                <a href="#"><li class="pull-right hidden"><i class="fa fa-pencil"></i> Change password</li></a>
-                <a href="#"><li class="pull-right hidden"><i class="fa fa-cog"></i> Settings</li></a>
-            </ul>
+			<section id="options">
+				<ul id="menu1">
+					<li><a href="#"><i class="fa fa-user"></i> User</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Book</a></li>
+				</ul>
+				<button type="button" id="menu1button"><i class="fa fa-plus"></i></button>
 
-            <!--menu 2-->
-            <a href="#"><li id="" class="pull-right clicker2"><i class="fa fa-plus fa-fw"></i></li></a>
-            <ul id="menu2">
-                <a href="#"><li class="pull-right hidden"><i class="fa fa-book"></i> Book</li></a>
-                <a href="#"><li class="pull-right hidden"><i class="fa fa-user"></i> User</li></a>
-            </ul>
-        </ul>
-    </footer>
+				<ul id="menu2">
+					<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+					<li><a href="#"><i class="fa fa-pencil"></i> Change password</a></li>
+					<li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+				</ul>
+				<button type="button" id="menu2button"><i class="fa fa-bars"></i></button>
+			</section>
+		</footer>
+	</div>
 
-    <!--jQuery and jQueryUI library imports-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> -->
     <script src="scripts/jquery.min.js"></script>
-    <!--custom page script import-->
     <script src="scripts/script.js"></script>
 </body>
 </html>

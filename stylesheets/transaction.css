@@ -4,18 +4,12 @@
 
 /* The main content area has 3 parts: user, profile, book
  *-------------------------------------------------------*/
-.content { width: 960px; }
+#content { width: 960px; }
 .banner {
     width: auto;
     padding-left: 4em;
     font-size: 3em;
     text-align: left;
-}
-.content-user{
-    float: left;
-    height: auto;
-    width: 70%;
-    padding-left: 20px;
 }
 /* This class floats to the right side of the `content-user` class */
 .content-profile {
@@ -24,8 +18,20 @@
     height: auto;
     width: 20%;
     border-left: dotted 1px #AEAEAE;
-    /*background-color: #FFFFFF;*/
 }
+.content-profile ul {
+    padding: 20px 0;
+}
+.content-user{
+    float: left;
+    height: auto;
+    width: 70%;
+    padding-left: 20px;
+}
+.content-profile ul {
+    list-style: none;
+}
+
 /* the book content area customization */
 .content-book {
     height: 100px;
@@ -46,7 +52,7 @@
 .textbox-sm { width: 10%; margin-left:0;}
 
 /*-------------------------------------------------------
- * CUSTOMIZE THE VARIOUS ITEMS 
+ * CUSTOMIZE THE VARIOUS ITEMS
  *-------------------------------------------------------*/
 .item-action {
     display: inline-block;

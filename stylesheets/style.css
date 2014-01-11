@@ -1,192 +1,275 @@
-/* GLOBAL STYLES
+/* font-face
 ----------------------------------------------------------- */
-* { margin: 0;}
 
-html, body {
-    height: 100%;
-    background-color: #EEEEEE; /* #F5F5F5 */
-    font-size: 16px;
-    font-family: 'Voltaire';
-    color: #7D7D7D;
+@font-face {
+	font-family: 'Voltaire';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Voltaire'), url(../fonts/voltaire.woff) format('woff');
 }
 
-/* CUSTOMIZE THE MAIN CONTENT AREA
+/* global styles
 ----------------------------------------------------------- */
-.content {
-    /*min-height: auto;*/
-    margin: auto;
-    padding-top: 5em;
-    width: 80%;
-    text-align: center;
-}
-
-.site-logo {
-    letter-spacing: 10px;
-    color: #FFFFFF;
-    font: bold 170px/170px '47', sans-serif;
-}
-
-.site-tagline {
-    margin-top: 15px;
-    color: #7D7D7D;
-    font-size: 40px;
-    font-family: 'Voltaire', sans-serif;
-}
-
-/* Form element */
-.form {
-    height: auto;
-    width: auto;
-    margin: 30px 0;
-}
-
-.textbox {
-    height: auto;
-    width: 50%;
-    padding: 13px;
-    border: none;
-    background-color: #FCFCFC;
-    font-size: 16px;
-    font-family: 'Voltaire';
-}
-
-/* Special class used for positioning the `search` icon inside the text-box */
-.search-fix {
-    position: relative;
-    margin-left: -30px;
-    color: #7D7D7D;
-}
-
-/* CUSTOMIZIE THE FOOTER
----------------------------------------------------------*/
-/* Negative margin to pull up the footer and lighter body text */
-
-.site-footer {
-    position: fixed;
-    margin-bottom: 10px;
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 100%;
-    background-color: #282828;
-    font-size: 20px;
-}
-
-/* Make an inline list */
-ul {
-    list-style: none;
-    display: inline;
-}
-
-footer li {
-    margin: auto;
-    padding: .6em;
-    height: auto;
-    width: auto;
-    border-left: solid 1px #222222;
-    border-bottom: solid 4px transparent;
-    background-color: #282828;
-    color: #848484;
-    font-family: 'Voltaire';
-    text-align: center;
-}
-
-/* the pro-active class is set for the cope logo */
-footer li:hover, footer li.pro-active { color: #FFFFFF; }
-
-footer li.active {
-    background-color: #333333;
-    color: #FFFFFF;
-    border-bottom: solid 4px #008DDE; /* #20a2d2 */
-}
-
-/* Customize the sliding menus in the nav bar */
-#menu1 li, #menu2 li { font-size: 20px; }
-
-/* The elements on the panel are kept hidden by default */
-footer li.hidden { display: none; }
-
-/* Float the elements on the left/right side */
-.pull-left { float: left; }
-.pull-right { float: right; }
-
-
-/* CUSTOMIZE SELECTION COLOR
--------------------------------------------------------*/
-/* changes the color when you select some text */
 ::selection {
-    background-color: #008DDE;
-    color: #FFFFFF;
+	background-color: #008DDE;
+	color: #FFFFFF;
 }
 
-/* RESPONSIVE CSS
+::-moz-selection {
+	background-color: #008DDE;
+	color: #FFFFFF;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, #container {
+	height: 100%;
+}
+
+body {
+	background-color: #EEE;
+	font-family: 'Voltaire', sans-serif;
+	color: #7D7D7D;
+}
+
+/* customize the main content area
+----------------------------------------------------------- */
+#content {
+	margin: 0 auto;
+	padding-top: 5em;
+	width: 80%;
+	text-align: center;
+}
+
+#site-logo {
+	font-family: '47', sans-serif;
+	font-size: 170px;
+	line-height: 170px;
+	color: #FFF;
+	text-shadow: 0 0 20px rgba(135,135,135,.3);
+	letter-spacing: 10px;
+}
+
+#site-tagline {
+	margin-top: 15px;
+	color: #7D7D7D;
+	font-family: 'Voltaire', sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+#content form {
+	height: auto;
+	width: auto;
+	margin: 30px 0;
+}
+
+#q {
+	padding: 13px;
+	width: 55%;
+	border: none;
+	background-color: #FCFCFC;
+	border-radius: 3px;
+	font-family: 'Voltaire';
+	font-size: 16px;
+}
+
+#q:focus {
+	outline: 2px solid #999;
+    outline: auto 3px -webkit-focus-ring-color;
+}
+
+#content form button {
+	position: relative;
+	margin-left: -30px;
+	border: none;
+	color: #7D7D7D;
+	background: none;
+	cursor: pointer;
+	font-size: 15px;
+	outline-style: none;
+}
+
+#content form button:focus {
+	outline: 0;
+}
+
+/* customizie the footer
+---------------------------------------------------------*/
+#site-footer, #site-footer * {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		 -o-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+#site-footer {
+	margin-bottom: 10px;
+	padding-left: 20px;
+	position: fixed;
+	left: 0; bottom: 0;
+	height: 50px; width: 100%;
+	background-color: #282828;
+}
+
+#site-footer * {
+	height: 100%;
+}
+
+#nav {
+	float: left;
+}
+
+#options {
+	float: right;
+}
+
+#site-footer section * {
+	float: left;
+}
+
+/* css to hide #menu1 and #menu2 */
+#menu1, #menu2 {
+	display: none;
+}
+
+#site-footer li {
+	list-style: none;
+}
+
+
+#site-footer a {
+	padding: 0 10px;
+	font-family: 'Voltaire';
+	font-size: 20px;
+	line-height: 50px;
+	text-decoration: none;
+	color: #848484;
+	outline-color: invert;
+}
+
+#site-footer i {
+	line-height: 50px;
+	padding: 0 10px;
+}
+
+#site-footer button {
+	padding: 0 3px;
+	background: none;
+	border: none;
+	font-size: 20px;
+	color: #848484;
+	cursor: pointer;
+}
+
+#site-footer li:hover a, #site-footer li a:focus {
+	color: white;
+}
+
+#site-footer button:hover, #site-footer button:focus {
+	color: white;
+}
+
+/* hide the .display-icon */
+.display-icon { display: none; }
+
+/* styles for li.active and li.pro-active
+----------------------------------------------------------- */
+
+#site-footer li.pro-active a {
+	color: white;
+}
+
+#site-footer li.active {
+	border-bottom: solid 4px #008DDE;
+	background: #333;
+}
+
+#site-footer li.active a {
+	color: white;
+}
+
+#site-footer button.active {
+	border-bottom: solid 4px #008DDE;
+	background: #333;
+	color: white;
+}
+
+/* remove moz dotted outline on focus */
+#site-footer button.active::-moz-focus-inner {
+	border: 0;
+}
+
+/* responsive css
 ---------------------------------------------------------*/
 
 @media handheld, (max-width: 768px) {
-    /* Adjust the logo for mobile */
-    .site-logo { font-size: 150px; }
-    .site-tagline { font-size: 20px; }
-    /* Adjust the length of the input box to screen size */
-    .textbox { width: 90%; }
-    /* replace the text in navbar with icon */
-    .display-text { display: none; }
-    .display-icon { display: inline; }
-    #menu1 li, #menu2 li { font-size: 16px;}
+	/* Adjust the logo for mobile */
+	#site-logo { font-size: 150px; }
+	#site-tagline { font-size: 20px; }
+	/* Adjust the length of the input box to screen size */
+	#q { width: 90%; }
+	/* replace the text in navbar with icon */
+	.display-text { display: none; }
+	.display-icon { display: inline; }
+	#menu1 li, #menu2 li { font-size: 16px;}
+	#site-footer { padding: 0; }
 }
 
 @media (min-width: 768px) {
-    .site-tagline { font-size: 30px; }
-    /* replace the icon in navbar with text */
-    .display-text { display: inline; }
-    .display-icon { display: none; }
+	#site-tagline { font-size: 30px; }
+	/* replace the icon in navbar with text */
+	.display-text { display: inline; }
+	.display-icon { display: none; }
 }
 
 @media (min-width: 992px) {
-    .textbox { width: 50%; }
+	#q { width: 55%; }
 }
 
 /* media queries for handheld devices
  ------------------------------------------------------*/
 @media (max-width: 390px), handheld and (orientation: portrait) {
-    /* for really slim displays */
-    .site-logo { font-size: 120px; }
-    .site-tagline { font-size: 16px; }
-    .site-footer { font-size: 16px; }
-    .search-fix {display: none; }
-    .pull-right { float: left;}
+	/* for really slim displays */
+	#site-logo { font-size: 120px; }
+	#site-tagline { font-size: 16px; }
+	#site-footer { font-size: 16px; padding: 0;}
+	#content form button { display: none; }
+	#options { float: left; }
 }
 
 @media (max-height: 450px) {
-    /* Customize the content area and footer for displays of small height */
-    .content {
-        min-height: 60%;
-        height: auto !important;
-        height: 100%;
-        margin-bottom: -.5px;
-        padding: 0;
-    }
-    .content:after {
-        content: "";
-        display: block;
-    }
-    .site-footer, .content:after {
-        /* .push must be the same height as footer */
-        height: 142px
-    }
-    .site-logo {
-        font-size: 120px;
-        height: 150px;
-    }
-    .site-tagline {
-        font-size: 14px;
-        margin: 12px 0 24px 0;
-    }
-    .form { margin: auto;}
-    .site-footer {
-        font-size: 16px; 
-        position: static;
-        height: 2.8em;
-        margin-bottom: 0;
-    }
-    #menu1 li, #menu2 li { font-size: 16px;}
+	/* Customize the content area and footer for displays of small height */
+	#content {
+		min-height: 60%;
+		height: auto !important;
+		height: 100%;
+		margin-bottom: -.5px;
+		padding: 0;
+	}
+	#content:after {
+		content: '';
+		display: block;
+		height: 142px;
+	}
+	#site-logo {
+		font-size: 120px;
+		height: 150px;
+	}
+	#site-tagline {
+		font-size: 14px;
+		margin: 12px 0 24px 0;
+	}
+	#content form { margin: auto;}
+	#site-footer {
+		font-size: 16px;
+		position: static;
+		margin-bottom: 0;
+		padding: 0;
+	}
+	#menu1, #menu2 { font-size: 16px;}
 }
